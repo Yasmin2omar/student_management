@@ -6,4 +6,4 @@ php artisan route:cache || true
 php artisan view:cache || true
 
 php-fpm -D
-nginx -g "daemon off;"
+nginx -c /app/nginx.conf -g "daemon off;"
