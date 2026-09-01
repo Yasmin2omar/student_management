@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TelegramAuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::redirect('/', '/admin');
+Route::get('/telegram/callback', [TelegramAuthController::class, 'callback'])
+    ->name('telegram.callback');
